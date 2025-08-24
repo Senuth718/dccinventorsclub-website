@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Inventors' Club</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)),
+                url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1400&q=80');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #333;
+  }
+  header {
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .logo-container {
+    display: flex;
+    align-items: center;
+  }
+  .logo-container img {
+    height: 50px;
+    margin-right: 10px;
+    border-radius: 5px;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+  }
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    font-weight: bold;
+  }
+  nav a:hover {
+    text-decoration: underline;
+  }
+  .hero {
+    text-align: center;
+    padding: 80px 20px;
+  }
+  .hero h2 {
+    font-size: 2.5rem;
+    margin: 0 0 10px;
+    text-shadow: 0 3px 6px rgba(0,0,0,0.3);
+  }
+  .hero p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: auto;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  }
+  .section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 40px 20px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+  }
+  .card {
+    margin-bottom: 40px;
+  }
+  .gallery-preview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 14px;
+  }
+  .gallery-preview img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  footer {
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+  }
+  /* PDF Download Button */
+  .download-btn {
+    display: inline-block;
+    background: #0077cc;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+  }
+  .download-btn:hover {
+    background: #005fa3;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo-container">
+    <img src="logo.png" alt="Club Logo" />
+    <h1>Inventors' Club</h1>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="about.html">About</a>
+    <a href="contactus.html">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <center><img src="dcclogo.png" style="width:150px; height:auto;">
+
+   <img src="logo.png" style="width:170px; height:auto;">
+
+  </center>
+  <h2>Welcome to Inventors' Club of Debarawewa Central College</h2>
+  <p>Innovating the future through creativity, teamwork, and technology.</p>
+</section>
+
+
+<div class="section">
+  <div class="card" id="about">
+    <h2>About Us</h2>
+    <p>We are a community of passionate innovators, engineers, and creators who work together on exciting projects, participate in competitions, and share knowledge through workshops and events.</p>
+  </div>
+  <center>
+    <div>
+  <h3>පාසලේ දැක්ම</h3>
+  <h5>දක්ෂිණ ශ්‍රී ලංකාවේ විශිෂ්ඨතම ද්වීතික අධ්‍යාපන මධ්‍යස්ථානය බවට පත්වීම.</h5><br>
+  <h3>පාසලේ මෙහෙවර</h3>
+  <h5>ප්‍රවේශ වන සියලුම දරුවන්ට සමාන අවස්ථා සලසමින් දැනුම, ආකල්ප, කුසලතා වලින් පිරි මනා පෞරුෂත්වයක් ඇති විශ්වීය අභිෂග ජයගත හැකි පුරවැසියන් බිහිකිරීමට ඵලදායීව හා ස්වයං අභිප්‍රේරණයෙන් යුත්කණ්ඩායමක් ලෙස කටයුතු කිරීම.</h5>
+
+</div></center>
+
+  <div class="card">
+    <h2>Gallery Preview</h2>
+    <div class="gallery-preview">
+      <a href="#img1"><img src="https://scontent.fcmb4-2.fna.fbcdn.net/v/t39.30808-6/471201310_122165969600263641_4875679255160635766_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHLnh-QjhpjYZHv4bTUdPtGpErmqJjwXWykSuaomPBdbD4lGsc9X4RqILBdE6y1T6yyn11NXcEq6HJuoOsQqXLj&_nc_ohc=gDQeQ3uGKJAQ7kNvwHbwoxg&_nc_oc=AdlIHlaEnJc6FcqTk88EeFrGHHUoNNfPZgmGXRnHXVGgGckYDHPySOb8ywYiQI0kOj75bx2Xd3aAeLnyHIYQF40C&_nc_zt=23&_nc_ht=scontent.fcmb4-2.fna&_nc_gid=QREodN5NpaHhUY6LTr11lg&oh=00_AfUxHYpEWp86Z3VflVSkcuQBlCyUmhe-am_9lXbRtImiBA&oe=68A095B4" alt="2K23 SLIC Winner"></a>
+      <a href="#img2"><img src="https://scontent.fcmb11-2.fna.fbcdn.net/v/t39.30808-6/474692255_122171628374263641_5837256533263701267_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHQ0eHkaWE8Er9qS6T_2EXHyLNEsVKPnI7Is0SxUo-cjup04eLT-__J92ELI53zPLWeEYDXdC-f7YLj3kmk--_H&_nc_ohc=GfZ6rAZI8OoQ7kNvwHXbJGh&_nc_oc=Admyyz0_zmfUIJlSLQir2QPy8WSBCJaPlkQxA8x2Ka5PpLNYiEm2PEaVgDrZx0mkQl0IgIQ-4EM7GwACCqCXGVT4&_nc_zt=23&_nc_ht=scontent.fcmb11-2.fna&_nc_gid=R9cbfPzR2dN5nEx-3adWHA&oh=00_AfWFBrwtjYp9sruzidRV-lt3tNuNvbTtjbMfY38YyhTt4g&oe=68A0ADBC" alt="Prototype Night"></a>
+      <a href="#img3"><img src="https://scontent.fcmb4-2.fna.fbcdn.net/v/t1.6435-9/135112523_416891159748133_172693514708961233_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHmaM-avII7p1i0r0ttrS986kW3-P_rPFPqRbf4_-s8U9Yq0Y-ciUknANiePTD8LiYAUxb8pl_p5lm2-LMipMh2&_nc_ohc=MevWzbFGXU8Q7kNvwEDFkPR&_nc_oc=AdkDcWjQy2Fwti5-wJt233-FKqKOVkMPQ36GGmq3vhf1UBqFrTbprQTPvi9W6ydefxNEcm_tsNoVZ9_cbpoMfa6z&_nc_zt=23&_nc_ht=scontent.fcmb4-2.fna&_nc_gid=VDIQyu-jkZIYa4lwb-klKA&oh=00_AfWg3N4Py_BgpUtM9mAWV8ajxwoh05j_1oS-7tKwH6fE0A&oe=68C24CF4" alt="3D Printing Lab"></a>
+    </div>
+    <p style="text-align:center; margin-top:15px;"><a href="gallery.html">View Full Gallery →</a></p>
+  </div>
+
+  <div class="card" id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: imalirandima@gmail.com</p>
+    <p>Phone: +94 71 123 4567</p>
+    <p>Address: Debarawewa Central College, Sri Lanka</p>
+  </div>
+
+  <!-- Download PDF Section -->
+   <center>
+    <div class="card" id="download">
+    <h2>Inventors' Application</h2>
+    <p>Download file from here</p>
+    <a href="inventor application.pdf" download class="download-btn">📄 Download PDF</a>
+  </div>
+   </center>
+  
+</div>
+
+<footer>
+  &copy; 2025 Inventors' Club - All Rights Reserved
+</footer>
+
+</body>
+</html>

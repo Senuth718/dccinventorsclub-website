@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+    }
+
+    .logo {
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    /* Gallery styles */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 15px;
+      padding: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Lightbox styles */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.9);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 80%;
+      border-radius: 10px;
+    }
+
+    .lightbox:target {
+      display: flex;
+    }
+    footer {
+    background: rgba(0, 0, 0, 0.85);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+  }
+
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 40px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <div class="logo">
+      <img src="logo.png" alt="Logo" style="width: 100%; height: 100%; object-fit: cover;">
+    </div>
+    <div>
+      <div style="font-weight: 800; font-size: 16px;">About</div>
+      <div class="small">Sparking ideas into inventions</div>
+    </div>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="about.html">About</a>
+    <a href="contactus.html">Contact</a>
+  </nav>
+</header>
+
+<section><main>
+  <h1 style="text-align:center; padding:20px;">Our Gallery</h1>
+  <div class="gallery">
+    <a href="2020.jpg"><img src="2020.jpg" alt="Gallery Image 1"></a>
+    <a href="2022.jpg"><img src="2022.jpg" alt="Gallery Image 2"></a>
+    <a href="2023.jpg"><img src="2023.jpg" alt="Gallery Image 3"></a>
+    <a href="20231.jpeg"><img src="20231.jpeg" alt="Gallery Image 4"></a>
+    <a href="2024.jpg"><img src="2024.jpg" alt="Gallery Image 5"></a>
+    <a href="Post 03.jpg"><img src="Post 03.jpg" alt="Gallery Image 5"></a>
+  </div>
+
+  <!-- Lightbox Popups -->
+  <div id="img1" class="lightbox">
+    <a href="2020.jpg" class="close">&times;</a>
+    <img src="2020.jpg" alt="Gallery Image 1">
+  </div>
+
+  <div id="img2" class="lightbox">
+    <a href="2022.jpg" class="close">&times;</a>
+    <img src="2022.jpg" alt="Gallery Image 2">
+  </div>
+
+  <div id="img3" class="lightbox">
+    <a href="2023.jpg" class="close">&times;</a>
+    <img src="2023.jpg" alt="Gallery Image 3">
+  </div>
+
+  <div id="img4" class="lightbox">
+    <a href="20231.jpeg" class="close">&times;</a>
+    <img src="20231.jpeg" alt="Gallery Image 4">
+  </div>
+
+  <div id="img5" class="lightbox">
+    <a href="2024.jpg" class="close">&times;</a>
+    <img src="2024.jpg" alt="Gallery Image 5">
+  </div>
+    <div id="img5" class="lightbox">
+    <a href="Post 03.jpg" class="close">&times;</a>
+    <img src="Post 03.jpg" alt="Gallery Image 6">
+  </div>
+</main>
+</section>
+<footer>
+  &copy; 2025 Inventors' Club - All Rights Reserved
+</footer>
+
+</body>
+</html>

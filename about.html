@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+    header {
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+    }
+    .logo {
+      width: 50px;
+      height: 50px;
+      margin-right: 10px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .section-title {
+      text-align: center;
+      padding: 20px;
+    }
+    .team {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .member {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      cursor: pointer;
+    }
+    .member img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;
+      transition: transform 0.4s ease;
+    }
+    .member img:hover {
+      transform: scale(1.08);
+    }
+    .member h3 {
+      margin: 10px 0 5px;
+      font-size: 20px;
+    }
+    .member p {
+      font-size: 16px;
+    }
+
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 10000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+    }
+    .modal-content {
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      width: 400px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+      position: relative;
+    }
+    .modal-content img {
+      width: 150px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+    }
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 22px;
+      cursor: pointer;
+      color: red;
+    }
+    footer {
+      background: rgba(0, 0, 0, 0.85);
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <div class="logo">
+      <img src="logo.png" alt="Logo" style="width: 100%; height: 100%; object-fit: cover;">
+    </div>
+    <div>
+      <div style="font-weight: 800; font-size: 16px;">Inventors' Club</div>
+      <div class="small">Sparking ideas into inventions</div>
+    </div>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="about.html">About</a>
+    <a href="contactus.html">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <h1 class="section-title">Principal</h1>
+  <div class="team">
+    <div class="member" 
+         data-name="Mr. Dhanushka Mudalige" 
+         data-img="principal.jpg" 
+         data-qual="B.Sc, M.Ed" 
+         data-position="Principal" 
+         data-exp="15+ years in education">
+      <img src="principal.jpg" alt="Principal">
+      <h3>Mr. Dhanushka Mudalige</h3>
+    </div>
+  </div>
+
+  <!-- Guide Teachers -->
+  <h1 class="section-title">Our Guide Teachers</h1>
+  <div class="team">
+    <div class="member" 
+         data-name="Mrs. Imali Randima" 
+         data-img="imali.jpg" 
+         data-qual="BSc, HNDA, AAT Mat, PGDE, SLIIT IT Diploma" 
+         data-position="Guide Teacher" 
+         data-exp="12 years experience  teaching,2 years  - development officer  Ag office thissamaharama,1 years - account clark    industrial development bord head office  (IDB), katubedda , colombo">
+      <img src="imali.jpg" alt="Imali Randima">
+      <h3>Mrs. Imali Randima</h3>
+    </div>
+    <div class="member" 
+         data-name="Mr. J.A.D. Asanka" 
+         data-img="asanka.jpg" 
+         data-qual="HNDE , B Ed, IT diploma" 
+         data-position="Guide Teacher" 
+         data-exp="Microcel pvt - 2 years as a production executive,DPJ Holding Pvt - 3 years as a technical officer,Brandx  welisara - 1 year planning officer,RCT - Orugodawatta, technical officer">
+      <img src="asanka.jpg" alt="Asanka">
+      <h3>Mr. J.A.D. Asanka</h3>
+    </div>
+    <div class="member" 
+         data-name="Mrs. Ajantha Koggalahewage" 
+         data-img="ajantha.jpg" 
+         data-qual="Bsc. Agricultural sciences and Management,Bussiness Management Diploma in sabaragamuwa University of Sri Lanka,Open and Distance Learning Center,Post Graduate Diploma  Education In NIE" 
+         data-position="Guide Teacher" 
+         data-exp="18+ years in teaching">
+      <img src="ajantha.jpg" alt="Ajantha">
+      <h3>Mrs. Ajantha Koggalahewage</h3>
+    </div>
+    <div class="member" 
+         data-name="Mrs. Subhani Maheshika" 
+         data-img="subhani.jpg" 
+         data-qual="National Diploma in science English medium and Bachelor of Educationa in science" 
+         data-position="Guide Teacher" 
+         data-exp="none">
+      <img src="subhani.jpg" alt="Subhani">
+      <h3>Mrs. Subhani Maheshika</h3>
+    </div>
+  </div>
+
+  <!-- Committee -->
+  <h1 class="section-title">Our Committee</h1>
+  <div class="team">
+    <div class="member" data-name="W. Manith Thenuka" data-img="mani.jpg" data-qual="Student" data-position="President" data-exp="—">
+      <img src="mani.jpg" alt="Manith">
+      <h3>W. Manith Thenuka</h3>
+      <p>President</p>
+    </div>
+    <div class="member" data-name="Senuth Nethnaka" data-img="senu.jpg" data-qual="Student" data-position="Secretary" data-exp="—">
+      <img src="senu.jpg" alt="Senuth">
+      <h3>Senuth Nethnaka</h3>
+      <p>Secretary</p>
+    </div>
+    <div class="member" data-name="Bhanu Sasrutha" data-img="bhanu.jpg" data-qual="Student" data-position="Vice President" data-exp="—">
+      <img src="bhanu.jpg" alt="Bhanu">
+      <h3>Bhanu Sasrutha</h3>
+      <p>Vice President</p>
+    </div>
+    <div class="member" data-name="Dahami Akarsha" data-img="daha.jpg" data-qual="Student" data-position="Vice Secretary" data-exp="—">
+      <img src="daha.jpg" alt="Dahami">
+      <h3>Dahami Akarsha</h3>
+      <p>Vice Secretary</p>
+    </div>
+    <div class="member" data-name="Manuka Bathula" data-img="manu.jpg" data-qual="Student" data-position="Treasurer" data-exp="—">
+      <img src="manu.jpg" alt="Manuka">
+      <h3>Manuka Bathula</h3>
+      <p>Treasurer</p>
+    </div>
+  </div>
+</main>
+
+<!-- Shared Modal -->
+<div id="profileModal" class="modal">
+  <div class="modal-content">
+    <span class="close" id="closeBtn">&times;</span>
+    <img id="modalImg" src="" alt="">
+    <h2 id="modalName"></h2>
+    <p><strong>Qualifications:</strong> <span id="modalQual"></span></p>
+    <p><strong>Position:</strong> <span id="modalPos"></span></p>
+    <p><strong>Experience:</strong> <span id="modalExp"></span></p>
+  </div>
+</div>
+
+<script>
+  const modal = document.getElementById("profileModal");
+  const modalImg = document.getElementById("modalImg");
+  const modalName = document.getElementById("modalName");
+  const modalQual = document.getElementById("modalQual");
+  const modalPos = document.getElementById("modalPos");
+  const modalExp = document.getElementById("modalExp");
+  const closeBtn = document.getElementById("closeBtn");
+
+  document.querySelectorAll(".member").forEach(member => {
+    member.addEventListener("click", () => {
+      modal.style.display = "flex";
+      modalImg.src = member.dataset.img;
+      modalName.textContent = member.dataset.name;
+      modalQual.textContent = member.dataset.qual;
+      modalPos.textContent = member.dataset.position;
+      modalExp.textContent = member.dataset.exp;
+    });
+  });
+
+  closeBtn.onclick = () => modal.style.display = "none";
+  window.onclick = (e) => { if (e.target == modal) modal.style.display = "none"; }
+</script>
+
+<footer>
+  &copy; 2025 Inventors' Club - All Rights Reserved
+</footer>
+
+</body>
+</html>
