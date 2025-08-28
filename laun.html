@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Choose Your Language</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+            background-color: #f4f4f4;
+        }
+
+        select {
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        h1 {
+            color: #333;
+        }
+    </style>
+</head>
+<body background="8388.jpg">
+
+    <h1>Select Your Language</h1>
+
+    <select id="language-select" onchange="redirectToLanguage()">
+        <option value="">-- Please choose an option --</option>
+        <option value="en">English</option>
+        <option value="es">Sinhala</option>
+        
+        <!-- Add more languages as needed -->
+    </select>
+
+    <script>
+        function redirectToLanguage() {
+            const selectedLang = document.getElementById('language-select').value;
+
+            if (selectedLang) {
+                // Replace with your actual URLs for each language
+                const urls = {
+                    en: 'en.html',
+                    es: 'index.html',
+                    
+                };
+
+                window.location.href = urls[selectedLang];
+            }
+        }
+    </script>
+
+</body>
+</html>
