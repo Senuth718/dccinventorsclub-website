@@ -8,21 +8,20 @@
   body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)),
-                url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1400&q=80');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: #f8f9fa;
     color: #333;
   }
+
+  /* Header */
   header {
     background: rgba(0, 0, 0, 0.85);
     color: white;
-    padding: 10px 20px;
+    padding: 12px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
+
   .logo-container {
     display: flex;
     align-items: center;
@@ -36,30 +35,88 @@
     margin: 0;
     font-size: 1.5rem;
   }
+
   nav a {
     color: white;
     text-decoration: none;
     margin-left: 15px;
     font-weight: bold;
+    padding: 8px 14px;
+    border-radius: 6px;
+    transition: background 0.3s;
   }
   nav a:hover {
-    text-decoration: underline;
+    background: #539dd9;
   }
+
+  /* Hero Section */
   .hero {
+    height: 100vh;
+    background: url("webback.jpg") no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 80px 20px;
+    color: white;
+    position: relative;
+  }
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
   }
   .hero h2 {
-    font-size: 2.5rem;
-    margin: 0 0 10px;
+    font-size: 3rem;
+    margin: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.2;
     text-shadow: 0 3px 6px rgba(0,0,0,0.3);
   }
   .hero p {
     font-size: 1.2rem;
-    max-width: 600px;
-    margin: auto;
+    margin-top: 15px;
     text-shadow: 0 2px 5px rgba(0,0,0,0.3);
   }
+
+  /* Buttons */
+  .btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 10px;
+    transition: 0.3s;
+  }
+  .btn-primary {
+    background: #0077cc;
+    color: white;
+  }
+  .btn-primary:hover {
+    background: #005fa3;
+  }
+  .btn-outline {
+    border: 2px solid white;
+    color: white;
+  }
+  .btn-outline:hover {
+    background: white;
+    color: #0077cc;
+  }
+
+  /* Section Cards */
   .section {
     max-width: 1100px;
     margin: auto;
@@ -67,10 +124,13 @@
     background: white;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    margin-top: 40px;
   }
-  .card {
-    margin-bottom: 40px;
+  .section h2 {
+    margin-top: 0;
   }
+
+  /* Gallery */
   .gallery-preview {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -82,6 +142,8 @@
     object-fit: cover;
     border-radius: 10px;
   }
+
+  /* Footer */
   footer {
     background: rgba(0, 0, 0, 0.85);
     color: white;
@@ -89,7 +151,8 @@
     padding: 15px;
     margin-top: 40px;
   }
-  /* PDF Download Button */
+
+  /* Download Button */
   .download-btn {
     display: inline-block;
     background: #0077cc;
@@ -101,15 +164,16 @@
     transition: background 0.3s ease;
   }
   .download-btn:hover {
-    background: #005fa3;
+    background: #539dd9;
   }
 </style>
 </head>
 <body>
 
+<!-- Header -->
 <header>
   <div class="logo-container">
-    <img src="logo.png" alt="Club Logo" />
+    <img src="logo.jpeg" alt="Club Logo" />
     <h1>Inventors' Club</h1>
   </div>
   <nav>
@@ -118,61 +182,63 @@
     <a href="events.html">Events</a>
     <a href="about.html">About</a>
     <a href="contactus.html">Contact</a>
+    <a href="login.html">Login</a>
+    <a href="signup.html">Sign Up</a>
   </nav>
 </header>
 
+<!-- Hero Section -->
 <section class="hero">
-  <center><img src="dcclogo.png" style="width:150px; height:auto;">
-
-   <img src="logo.png" style="width:170px; height:auto;">
-
-  </center>
-  <h2>Welcome to Inventors' Club of Debarawewa Central College</h2>
-  <p>Innovating the future through creativity, teamwork, and technology.</p>
+  <div class="hero-content">
+    <h2>WELCOME TO <br> INVENTORS' CLUB</h2>
+    <p>Join our community of innovators and creators.</p>
+    <a href="about.html" class="btn btn-primary">GET STARTED</a>
+    <a href="gallery.html" class="btn btn-outline">LEARN MORE</a>
+  </div>
 </section>
 
-
-<div class="section">
-  <div class="card" id="about">
-    <h2>About Us</h2>
-    <p>We are a community of passionate innovators, engineers, and creators who work together on exciting projects, participate in competitions, and share knowledge through workshops and events.</p>
-  </div>
- 
-
-  <div class="card">
-    <h2>Gallery Preview</h2>
-    <div class="gallery-preview">
-      <a href="#img1"><img src="https://scontent.fcmb4-2.fna.fbcdn.net/v/t39.30808-6/471201310_122165969600263641_4875679255160635766_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHLnh-QjhpjYZHv4bTUdPtGpErmqJjwXWykSuaomPBdbD4lGsc9X4RqILBdE6y1T6yyn11NXcEq6HJuoOsQqXLj&_nc_ohc=gDQeQ3uGKJAQ7kNvwHbwoxg&_nc_oc=AdlIHlaEnJc6FcqTk88EeFrGHHUoNNfPZgmGXRnHXVGgGckYDHPySOb8ywYiQI0kOj75bx2Xd3aAeLnyHIYQF40C&_nc_zt=23&_nc_ht=scontent.fcmb4-2.fna&_nc_gid=QREodN5NpaHhUY6LTr11lg&oh=00_AfUxHYpEWp86Z3VflVSkcuQBlCyUmhe-am_9lXbRtImiBA&oe=68A095B4" alt="2K23 SLIC Winner"></a>
-      <a href="#img2"><img src="https://scontent.fcmb11-2.fna.fbcdn.net/v/t39.30808-6/474692255_122171628374263641_5837256533263701267_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHQ0eHkaWE8Er9qS6T_2EXHyLNEsVKPnI7Is0SxUo-cjup04eLT-__J92ELI53zPLWeEYDXdC-f7YLj3kmk--_H&_nc_ohc=GfZ6rAZI8OoQ7kNvwHXbJGh&_nc_oc=Admyyz0_zmfUIJlSLQir2QPy8WSBCJaPlkQxA8x2Ka5PpLNYiEm2PEaVgDrZx0mkQl0IgIQ-4EM7GwACCqCXGVT4&_nc_zt=23&_nc_ht=scontent.fcmb11-2.fna&_nc_gid=R9cbfPzR2dN5nEx-3adWHA&oh=00_AfWFBrwtjYp9sruzidRV-lt3tNuNvbTtjbMfY38YyhTt4g&oe=68A0ADBC" alt="Prototype Night"></a>
-      <a href="#img3"><img src="https://scontent.fcmb4-2.fna.fbcdn.net/v/t1.6435-9/135112523_416891159748133_172693514708961233_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHmaM-avII7p1i0r0ttrS986kW3-P_rPFPqRbf4_-s8U9Yq0Y-ciUknANiePTD8LiYAUxb8pl_p5lm2-LMipMh2&_nc_ohc=MevWzbFGXU8Q7kNvwEDFkPR&_nc_oc=AdkDcWjQy2Fwti5-wJt233-FKqKOVkMPQ36GGmq3vhf1UBqFrTbprQTPvi9W6ydefxNEcm_tsNoVZ9_cbpoMfa6z&_nc_zt=23&_nc_ht=scontent.fcmb4-2.fna&_nc_gid=VDIQyu-jkZIYa4lwb-klKA&oh=00_AfWg3N4Py_BgpUtM9mAWV8ajxwoh05j_1oS-7tKwH6fE0A&oe=68C24CF4" alt="3D Printing Lab"></a>
-    </div>
-    <p style="text-align:center; margin-top:15px;"><a href="gallery.html">View Full Gallery →</a></p>
-  </div>
-
-  <div class="card" id="contact">
-    <h2>Contact Us</h2>
-    <p>Email: imalirandima@gmail.com</p>
-    <p>Phone: +94 71 123 4567</p>
-    <p>Address: Debarawewa Central College, Sri Lanka</p>
-  </div>
-
-  <!-- Download PDF Section -->
-   <center>
-    <div class="card" id="download">
-    <h2>Inventors' Application</h2>
-    <p>Download file from here</p>
-    <a href="inventor application.pdf" download class="download-btn">📄 Download PDF</a>
-  </div>
-   </center>
-  
+<!-- About Us -->
+<div class="section" id="about">
+  <h2>About Us</h2>
+  <p>We are a community of passionate innovators, engineers, and creators who work together on exciting projects, participate in competitions, and share knowledge through workshops and events.</p>
 </div>
 
+<!-- Gallery -->
+<div class="section">
+  <h2>Gallery Preview</h2>
+  <div class="gallery-preview">
+    <img src="https://scontent.fcmb4-2.fna.fbcdn.net/v/t39.30808-6/471201310_122165969600263641_4875679255160635766_n.jpg" alt="2K23 SLIC Winner">
+    <img src="https://scontent.fcmb11-2.fna.fbcdn.net/v/t39.30808-6/474692255_122171628374263641_5837256533263701267_n.jpg" alt="Prototype Night">
+    <img src="https://scontent.fcmb4-2.fna.fbcdn.net/v/t1.6435-9/135112523_416891159748133_172693514708961233_n.jpg" alt="3D Printing Lab">
+  </div>
+  <p style="text-align:center; margin-top:15px;"><a href="gallery.html">View Full Gallery →</a></p>
+</div>
+
+<!-- Contact -->
+<div class="section" id="contact">
+  <h2>Contact Us</h2>
+  <p>Email: imalirandima@gmail.com</p>
+  <p>Phone: +94 71 123 4567</p>
+  <p>Address: Debarawewa Central College, Sri Lanka</p>
+</div>
+
+<!-- PDF Download -->
+<div class="section" id="download" style="text-align:center;">
+  <h2>Inventors' Application</h2>
+  <p>Download file from here</p>
+  <a href="inventor-application.pdf" download class="download-btn">↓ Download PDF</a>
+</div>
+
+<!-- External Projects -->
+<div class="section" style="text-align:center;">
+  <h3>අපගේ සංගමය හා සම්බන්ද ව්‍යවසායක සංගමයේ සිසුන්ගේ නිර්මාණ මිලදී ගැනීමට පහත බටනය ඔබන්න.</h3>
+  <a href="nextindex.html" class="download-btn">Click Here</a>
+</div>
+
+<!-- Footer -->
 <footer>
   &copy; 2025 Inventors' Club - All Rights Reserved
 </footer>
 
 </body>
 </html>
-
-
-
